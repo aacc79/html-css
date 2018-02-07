@@ -218,8 +218,8 @@ header nav ul li a{
     background-image: url('../img/ordenador_tinypng.jpg');
     /* ajustamos el tamaño de la imagen fondo */
     background-size: cover;
-
-    background-attachment: fixed;
+    /* bgattachment fixed da problemas en iphone */
+    /* background-attachment: fixed; */
 
     /* ponemos los elementos de hero en row */
     display: flex;
@@ -538,6 +538,19 @@ direccion{
     line-height: 2em;
 }
 
+
+
+@media (min-width:1440px){
+    .hero{
+
+        /* para que el efecto parallax funcione solo en dispositivos mayores a 1440px */
+        background-attachment: fixed;
+    }
+}
+
+
+
+
 @media (max-width:920px){
    .colizquierda, .colcentro, .colderecha{
        flex-basis: 200px;
@@ -677,3 +690,5 @@ margin-top: 40px;
 }
 
 .logoimagen{width: initial;}
+
+.no_me_muevas{flex-wrap: wrap}
