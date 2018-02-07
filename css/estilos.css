@@ -13,7 +13,7 @@
 }
 
 h1, h2, p, ol, ul, li{color: white}
-p{font-size: 17px}
+p{font-size: 22px}
 ul{padding-left: 60px;}
 li{line-height: 1.8em; padding: 10px}
 
@@ -338,6 +338,7 @@ align-items: center;
 /* para que si la imagen fuese más pequeña que el texto de al lado, se colocase a media altura
 del texto, y no al inicio */
 .centrado{
+    text-align: center;
     display: flex;
     align-items: center;
     /* para que se ponga en el centro de la caja */
@@ -617,8 +618,8 @@ margin-top: 40px;
     }
 
     .inputnewsletter{
-        font-size: 15px;
-        padding: 12px;}
+        /* font-size: 15px;
+        padding: 12px;} */
     .botonnewsletter{
         font-size: 15px;
         padding: 12px;
