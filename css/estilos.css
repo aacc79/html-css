@@ -21,7 +21,7 @@ li{line-height: 1.8em; padding: 10px}
 Así tendrán el 100% del ancho DEL PADRE*/
 img{
     /* es más ancha de lo que debe, así que la limitamos */
-    max-width: 100%;
+    max-width: 600px;
     /* es menos alta de lo que debes, así que la expandimos */
     /* min-height: 100%; */
     /* para comprobar que la imagen se coloca a mitad del texto, la hacemos
@@ -278,7 +278,7 @@ align-items: center;
     display: flex;
     /* Si las cajas no caben, pon una debajo de otra */
     flex-wrap: wrap;
-
+    justify-content: center;
     align-items: center;
 }
 
@@ -644,7 +644,7 @@ margin-top: 40px;
     }
     
     img{
-        width: 100px;
+        width: 420px;
     }
 
     .fila{
