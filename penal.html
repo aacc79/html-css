@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PENAL</title>
+    <link rel="stylesheet" href="./css/estilospenal.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="">
+                <img height="90px" src="./img/law.png" alt="">
+        </a>
+        <nav>
+            <!-- Los menús los hacemos en forma de lista, pero se le quitan todos los estilos 
+            que las listas tienen -->
+            <ul>
+                <li><a href="">Procedimientos</a></li>
+                <li><a href="">Delito Leve</a></li>
+                <li><a href="">Abreviado Delitos concretos</a></li>
+                <li><a href="">Ordinario</a></li>
+                <li><a href="">Jurado</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+  
+    <!-- creamos una imagen grande de inicio -->
+    <div class="hero">
+        <h1>PROCEDIMIENTOS</h1>
+        <h2>Instrucción y Enjuiciamiento Penal</h2>
+
+         <!-- pegamos un icono de font awesome para usarlo de enlace -->
+         <!-- en href le indicamos qué id tiene el elemento al que queremos que viaje -->
+        <a href="#primera">
+        <i class="fas fa-chevron-circle-down"></i>
+        </a>
+    </div>
+    <!-- fin de Hero -->
+
+    <!-- A donde queremos navegar le ponemos un id, que llamaremos con a href en la imagen de flecha de arriba -->
+   <div class="fila" id="primera">
+       <div class="col3">
+        <p style="text-align:justify">Red Baron es una web creada en 2018 para enseñar conocimientos avanzados de desarrollo web de forma gratuita.
+            Aprende los entresijos de HTML5, CSS3, JavaScript, etc.
+        </p>
+        <p>Descarga y comparte código y recibe feedback de otros desarrolladores.</p>
+    </div>  
+    <!-- Fin de fila -->
+
+       <!-- .centrado para que la imagen se coloque a media altura del texto
+     cuando sea menor que este -->
+       <div class="col1 centrado">
+        <img src="./img/night.jpg" alt="">      
+        </div>
+    </div>
+    <!-- /*Fin de fila*/     -->
+
+    <!-- <div class="fila">
+        <div class="col2">
+            <img src="./img/ordenador.jpg" alt="">
+        </div>
+        <div class="col1 piederecho">
+            <p>Imagen</p>
+        </div>
+    </div>  -->
+    <!-- /*Fin de fila*/     -->
+
+    <div class="fila">
+            <div class="col1 columna">
+                <img src="./img/html5.svg" alt="">
+                <a href="" class="boton naranja">Acceder a </a>
+            </div>
+
+            <div class="col1 columna">
+                <img src="./img/css3.svg" alt="">
+                <a href="" class="boton azul">Acceder a </a>
+            </div>
+
+            <div class="col1 columna ">
+                <img src="./img/javascript.svg" alt="">
+                <a href="" class="boton amarillo">Acceder a </a>
+            </div>
+    </div>
+    <!-- fin de fila -->
+
+    <!-- a esta fila le ponemos un fondo -->
+    <div class="fila fondo">
+        <div class="col1">
+            <p class="slogan">
+                Red Baron. Ases de la web.
+            </p>
+        </div>
+    </div>
+    <!-- fin de fila -->
+
+    <div class="fila">
+        <!-- Como al fila tiene flex:wrap, lo que no cabe salta a la siguiente línea.
+        por eso a la primera columna de la fila le damos un ancho del 100%
+    para que la 2º columna baje -->
+    <!-- Al div le quitamos col1, porque si no prevalecerá sobre col100 -->
+        <div class="col100">
+            <p >Suscríbete a nuestra Newsletter</p>
+        </div>
+        <!-- ponemos tmbn col100 a este div -->
+        <div class="col100">
+            <input class="inputnewsletter" placeholder="Correo electrónico" type="text" name="" id="">
+            <!-- <input class="botonnewsletter" type="submit" value="Enviar"> -->
+            <!-- ponemos un icono como botón -->
+            <button class="botonnewsletter">
+                Suscríbete &nbsp;<i class="fab fa-angellist"></i>
+            </button>
+        </div>
+
+    </div>
+    <!-- fin de fila -->
+    
+    <!-- al footer pegamos el display y el flexwrite de fila -->
+    <footer>
+        <div class="col1 colizquierda">
+            <p>RedBaron, S.A.</p>
+            <p><i class="fas fa-map-marker"></i> Av. Cáceres, 26</p>
+            <p> 1314, París</p>
+            <p><i class="fas fa-phone-square"></i> 0039 13412 131</p>
+            <p><i class="fas fa-at"></i> redbaron@redbaron.es</p>
+        </div>
+
+        <div class="col1 colcentro">
+            <img width="100px" src="./img/css3.svg" alt="">
+            
+        </div>
+
+        <div class="col1 colderecha">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+            
+        
+
+        <div class="col100 minifooter">
+            <p>&reg; 2.018 RedBaron, S.A.</p>
+        </div>
+
+    
+    </footer>
+       
+    
+        
+   
+    
+   
+    
+    
+
+
+
+</body>
+</html>

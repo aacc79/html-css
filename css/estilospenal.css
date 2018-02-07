@@ -1,0 +1,385 @@
+/* autor y fecha */
+/* estilos generales */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+i{font-size: 40px;
+    color: black;
+}
+
+
+
+/* hacemos que las imágenes tengan un ancho máximo, para que no se nos salgan de la pantalla.
+Así tendrán el 100% del ancho DEL PADRE*/
+img{
+    /* es más ancha de lo que debe, así que la limitamos */
+    max-width: 100%;
+    /* es menos alta de lo que debes, así que la expandimos */
+    /* min-height: 100%; */
+    /* para comprobar que la imagen se coloca a mitad del texto, la hacemos
+    más pequeña */
+    /* height: 50px */
+}
+
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    columns: #3f3f3f;
+    background-color: black;
+}
+
+p{color: white}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    padding:10px;
+    /* ajustamos el interlineado entre las páginas */
+    line-height: 1.8em;
+}
+
+.boton{
+    margin: 40px;
+    color:white;
+    background-color: darkred;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.boton:hover, .botonnewsletter:hover{
+    animation-name: intermitente, luz;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+
+}
+
+.botonnewsletter:hover{
+    background-color: rgb(204, 7, 7);
+    border: solid 3px rgb(204, 7, 7);
+    cursor: pointer;
+}
+
+/* cambiamos los botones de color */
+
+.naranja{background-color:#DF4215; }
+.azul{background-color: #0D71B9; }
+.amarillo{background-color:#E8A50A; }
+
+.naranja:hover{background-color:rgb(250, 92, 48); }
+.azul:hover{background-color: rgb(17, 140, 228); }
+.amarillo:hover{background-color:rgb(255, 183, 14); }
+
+/* creamos una animación, y la llamamos "intermitente" */
+@keyframes intermitente{
+    /* al comienzo de la animación no será visible */
+    0%{opacity: 0}
+    
+    50%{opacity: 1}
+    /* al final de la animación será completamente visible */
+    100%{opacity: 0}
+}
+
+/* creo una animación para que se cree sombra intermitente */
+@keyframes luz{
+   0%{box-shadow: none}
+    100%{box-shadow: 5px 5px 15px rgb(255, 255, 106), -5px -5px 15px rgb(255, 255, 106) }
+}
+
+ 
+/* CABECERA CON BARRA DE NAVEGACIÓN */
+
+header{
+    /* Ponemos el header encima de la imagen hero, en vez de uno arriba y otra 
+    abajo a continuación */
+    position: absolute;
+    /* Esto estropea el ancho del header, que queda pequeño en vez de ocupar todo el ancho */
+    /* Top:0px entre la parte de arriba de la pantalla y el header hay 0px
+    poner top:300px baja el header a 300px por debajo */
+    top:0px;
+    /* restauramos el ancho de header, haciendo que vuelva a ocupar todo el ancho */
+    width: 100%;
+    /* Ponemos uno al lado del otro el logo y las listas */
+    /* border: 1px solid white; */
+    display:flex;
+    /* dejamos un espacio entre ellos */
+    justify-content: space-between;
+    /* damos una altura a la cabecera */
+    height: 100px;
+    /* centramos el logo y la lista verticalmente */
+    align-items: center;
+    /* alejamos el contenido de los bordes */
+    padding: 20px;
+    background-color: darkred;
+}
+/* a la lista del header le quitamos el aspecto de lista */
+header nav ul{
+    list-style: none;
+    /* border: 1px solid white; */
+    /* hacemos que los elementos de la antigua lista se pongan en horizontal
+    aunque se verán en horizontal */
+    display: flex;
+}
+
+header nav ul li{
+    /* damos espacio entre sí a los elementos de la antigua lista */
+    padding: 20px;
+}
+
+header nav ul li a{
+    /* a los enlaces de la lista les damos color blanco */
+    color: white;
+}
+
+/* SECCIÓN HERO */
+
+.hero{
+    /* hacemos que ocupe todo el espacio disponible */
+    height: 100vh;
+    /* Ponemos una imagen gratis de pixabay.com */
+    /* pasamos la imagen por tiny png para que ocupe menos */
+    background-image: url('http://www.poderjudicial.es/stfls/AUDIENCIA%20NACIONAL/INFORMACI%C3%93N%20INSTITUCIONAL/FICHEROS/20160613PresidenteAN1.JPG');
+    /* ajustamos el tamaño de la imagen fondo */
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    /* ponemos los elementos de hero en row */
+    display: flex;
+    /* ponemos los elementos en columna, el eje ppal es ahora el vertical */
+    flex-direction: column;
+    /* llevamos los elementos abajo del todo */
+    justify-content: flex-end;
+    /* centramos los elementos en el eje secundario */
+    align-items: center;
+}
+
+.hero h1{
+    /* damos formato al título h1 */
+    color: darkred;
+    font-size: 50px;
+    
+}
+
+.hero h2{
+    /* Como está abajo de la pantalla, lo subimos dándole margen abajo */
+    margin-bottom: 250px;
+}
+.hero a{
+    /* damos formato al enlace icono sacado de font awesome */
+    color: white;
+    font-size: 60px;
+    /* Como está abajo de la pantalla, lo subimos dándole margen abajo */
+    /* Solo con este margin, ya subiríamos también el h1 */
+    margin-bottom: 150px;
+    /* Llamamos a la animación "intermitente que creamos al principio" */
+    animation-name: intermitente;
+    animation-duration: 1500ms;
+    /* hacemos que la animación se repita infinitamente */
+    animation-iteration-count: infinite;
+}
+
+/* MAQUETACIÓN (LAYOUT)*/
+
+.fila{
+
+    /* separamos lo que queda DENTRO */
+    padding: 40px;
+    /* ponemos los contenedores uno al lado de otro */
+    display: flex;
+    /* Si las cajas no caben, pon una debajo de otra */
+    flex-wrap: wrap;
+}
+
+
+
+
+.col1{
+    /* para ver la columna */
+    /* border: solid 1px red; */
+    /* ancho de referencia */
+    flex-basis: 300px;
+    /* factor de crecimiento 1 */
+    flex-grow: 1;
+    /* para que no salgan pegados unos con otros */
+    padding: 10px;
+}
+
+.col2{
+    /* border: solid 1px red; */
+    flex-basis: 300px;
+    /* como el factor de crecimeinto es el doble que la otra columna,
+    por cada 3px libres que haya, este toma 2 y el otro 1 */
+    flex-grow: 2;
+    padding: 10px;
+
+}
+
+.col3{
+    /* border: solid 1px red; */
+    flex-basis: 300px;
+    /* como el factor de crecimeinto es el doble que la otra columna,
+    por cada 3px libres que haya, este toma 2 y el otro 1 */
+    flex-grow: 3;
+    padding: 10px;
+}
+
+.col100{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* el valor por defecto de align-items es stretch. Esto hace que 
+    el elemento tenga la altura del de su lado (contando tmbn los margin de este) */
+    /* Esto lo quitamos con align-items:center */
+    /* En este caso, si no ponemos align items center, el input de correo electronico
+    se nos estira en vertical, para igualarse a la altura del boton(teniendo en cuenta
+    tmbn el margin de este) */
+    align-items: center;
+    font-size: 30px;
+}
+
+/* para que si la imagen fuese más pequeña que el texto de al lado, se colocase a media altura
+del texto, y no al inicio */
+.centrado{
+    display: flex;
+    align-items: center;
+    /* para que se ponga en el centro de la caja */
+    justify-content: center;
+
+}
+
+.piederecho{
+    display:flex;
+    /* en el sentido horizontal por defecto está a la izquierda */
+    /* en ele sentido vertical está al final */
+   align-items: flex-end;
+}
+
+.columna{
+    display: flex;
+    flex-direction: column;
+    /* centramos los elementos vertical y horizontalmente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECCIÓN CON IMAGEN DE FONDO */
+
+.fondo{
+    background-image: url('../img/pcafe.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 60px 40px;
+}
+
+.slogan{
+    font-size: 40px;
+    text-align: center;
+    background-color: darkred;
+    border-radius: 20px;
+}
+
+/* FORMULARIO NEWSLETTER */
+
+.inputnewsletter{
+    margin: 10 px 20px;
+    color: darkred;
+    font-size: 20px;
+    padding: 15px;
+    border: solid 4px darkred;
+    
+}
+
+/* quitamos al input el reborde azul al seleccionar el input y el botón */
+
+.inputnewsletter:focus, .botonnewsletter:focus{
+outline: none
+}
+
+
+
+.botonnewsletter{
+    margin: 10px 20px;
+    color:white;
+    background-color: darkred;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 10px;
+    border: solid 3px darkred;
+}
+
+
+/* FOOTER */
+
+
+/* Ponemos al footer un background sacado de lea verau.com */
+
+footer{
+    font-size: 18px;
+     /* ponemos los contenedores uno al lado de otro */
+     display: flex;
+     /* Si las cajas no caben, pon una debajo de otra */
+     flex-wrap: wrap;
+    background:
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
+    radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0,
+    radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0,
+    radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0,
+    radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px,
+    linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0,
+    linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0;
+    background-color: #300; 
+    background-size: 100px 100px;
+}
+
+.minifooter p{
+    font-size: 10px;
+    padding: 0;
+    letter-spacing: 2px;
+}
+.colizquierda{
+    /* border: solid 1px greenyellow; */
+    text-align: justify;
+    padding: 5px;
+}
+
+/* hacemos que los p de la columna izquierda no queden tan espaciados entre sí */
+.colizquierda p{
+    padding: 5px;
+}
+
+
+.colcentro{
+    /* border: solid 1px greenyellow; */
+    text-align: justify;
+}
+
+.colderecha{
+    /* border: solid 1px greenyellow; */
+    text-align: justify;
+    /* ponemos los iconos en columna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}    
+
+
+/* damos formato a los enlaces en la columna derecha del footer */
+.colderecha a{
+    font-size: 60px;
+    color: white;
+
+}
