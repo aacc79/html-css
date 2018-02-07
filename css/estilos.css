@@ -662,7 +662,7 @@ margin-top: 40px;
 
     .fila{
 
-        padding: 40px;
+        padding: 20px;
         
         display: flex;
         flex-direction: column;
@@ -691,4 +691,4 @@ margin-top: 40px;
 
 .logoimagen{width: initial;}
 
-.no_me_muevas{flex-wrap: wrap}
+.no_me_muevas{white-space: nowrap}
