@@ -73,7 +73,7 @@ p{
 
 .separador{
     /* que no sea una barra tan grande entre los iconos */
-    width: 60%;
+    width: 200px;
     /* Que las barras no se vean entre */
     display: none;
     border: solid 2px darkred;
@@ -652,8 +652,9 @@ margin-top: 40px;
         padding: 40px;
         
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     .ultima{
@@ -668,10 +669,11 @@ margin-top: 40px;
         border-radius: 10px;
     }
 
-    .noche{width:100%;}
 
 }
 
 
 
 }
+
+.logoimagen{width: initial;}
