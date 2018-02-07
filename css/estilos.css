@@ -472,6 +472,8 @@ footer{
     /* border: solid 1px greenyellow; */
     text-align: justify;
     padding: 20px;
+    white-space: nowrap;
+    margin-right: 25px;
 }
 
 /* hacemos que los p de la columna izquierda no queden tan espaciados entre sí */
@@ -591,6 +593,20 @@ y abajo del todo para que no se pisen las propiedades */
         height: 160px;
     }
 }
+
+
+@media(max-width:730px){
+    .colcentro{
+        /* border: solid 1px greenyellow; */
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+}
+
+
 
 @media(max-width:640px){
     .fila{
